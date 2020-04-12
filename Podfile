@@ -8,7 +8,7 @@ target 'VideoStreaming' do
   # Pods for VideoStreaming
 #  pod 'NodeMediaClient', '~> 2.7.2'
 
-pod 'LFLiveKit', :git => 'https://github.com/Antalinka/LFLiveKit.git', :branch => 'master'
+pod 'LFLiveKit', :git => 'https://github.com/moosabaloch/LFLiveKit.git', :branch => 'master'
     pod 'MobileVLCKit'
 
 end
