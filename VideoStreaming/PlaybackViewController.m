@@ -7,26 +7,43 @@
 //
 
 #import "PlaybackViewController.h"
+//#import "VDLViewController.h"
 
-@interface PlaybackViewController ()
+#import <MobileVLCKit/MobileVLCKit.h>
 
+
+@interface PlaybackViewController ()<VLCMediaPlayerDelegate>
+{
+VLCMediaPlayer *mediaplayer;
+}
 @end
 
 @implementation PlaybackViewController
+- (IBAction)playPauseAction:(id)sender {
+    
+    if (mediaplayer.isPlaying){
+        [mediaplayer pause];
+    }
+    
+    [mediaplayer play];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
 }
 
-/*
-#pragma mark - Navigation
+- (void)viewDidAppear:(BOOL)animated{
+        /* setup the media player instance, give it a delegate and something to draw into */
+        mediaplayer = [[VLCMediaPlayer alloc] init];
+        mediaplayer.delegate = self;
+        mediaplayer.drawable = self.movieView;
+        
+        /* create a media object and give it to the player */
+        mediaplayer.media = [VLCMedia mediaWithURL:[NSURL URLWithString:@"rtmp://192.168.0.103:1935/live/stream"]];
+    //    mediaplayer.audioChannel = 2;
+    //    mediaplayer.audio.volume = 10;
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
-*/
 
 @end

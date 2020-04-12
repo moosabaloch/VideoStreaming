@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+#import <MobileVLCKit/MobileVLCKit.h>
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface PlaybackViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIView *movieView;
 
 @end
 

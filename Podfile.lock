@@ -1,0 +1,29 @@
+PODS:
+  - LFLiveKit (2.6)
+  - MobileVLCKit (3.3.10)
+
+DEPENDENCIES:
+  - LFLiveKit (from `https://github.com/Antalinka/LFLiveKit.git`, branch `master`)
+  - MobileVLCKit
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - MobileVLCKit
+
+EXTERNAL SOURCES:
+  LFLiveKit:
+    :branch: master
+    :git: https://github.com/Antalinka/LFLiveKit.git
+
+CHECKOUT OPTIONS:
+  LFLiveKit:
+    :commit: bd1402802e8d01d587db5fee672a427cc868fa5e
+    :git: https://github.com/Antalinka/LFLiveKit.git
+
+SPEC CHECKSUMS:
+  LFLiveKit: 2219563721f8aa0f188effc3395a06e2d53b23f2
+  MobileVLCKit: 34a4d22c48ea48a36c2a6fdf290d4ea094869ac0
+
+PODFILE CHECKSUM: 7a216dff12f8b465faa876fae7e328abd7f61e95
+
+COCOAPODS: 1.9.1
